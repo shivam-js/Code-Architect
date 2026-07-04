@@ -9,9 +9,7 @@ def test_root() -> None:
     response = client.get("/")
 
     assert response.status_code == 200
-    assert response.json() == {
-        "message": "Welcome to the CodeArchitect API!"
-    }
+    assert response.json() == {"message": "Welcome to the CodeArchitect API!"}
 
 
 def test_health_check() -> None:
