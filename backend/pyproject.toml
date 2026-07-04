@@ -1,0 +1,20 @@
+[project]
+name = "codearchitect-backend"
+version = "0.1.0"
+description = "Backend API and AI orchestration service for the CodeArchitect platform."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "fastapi>=0.139.0",
+    "uvicorn[standard]>=0.50.0",
+]
+
+[dependency-groups]
+dev = [
+    "httpx2>=2.5.0",
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
